@@ -1,0 +1,52 @@
+.cardStyle {
+    background-color: #31403f7a;
+    -webkit-box-shadow: 0.25em 0.188em 1.125em -0.063em rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0.25em 0.188em 1.125em -0.063em rgba(0, 0, 0, 0.75);
+    box-shadow: 0.25em 0.188em 1.125em -0.063em rgba(0, 0, 0, 0.75);
+    border-radius: 0.375em;
+  }
+  
+  canvas {
+    border-radius: 0.625em;
+    -webkit-box-shadow: 0.25em 0.188em 1.125em -0.063em rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0.25em 0.188em 1.125em -0.063em rgba(0, 0, 0, 0.75);
+    box-shadow: 0.25em 0.188em 1.125em -0.063em rgba(0, 0, 0, 0.75);
+  }
+  
+  .totalStyle {
+    background-color: #384a0d;
+    -webkit-box-shadow: 0.25em 0.188em 1.125em -0.063em rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0.25em 0.188em 1.125em -0.063em rgba(0, 0, 0, 0.75);
+    box-shadow: 0.25em 0.188em 1.125em -0.063em rgba(0, 0, 0, 0.75);
+    border-radius: 0.375em;
+    margin-top: 5%;
+    padding: 2%;
+    margin-bottom: 5%;
+  }
+
+  body {
+    background-image: url('../imagenes/tunel_final.webp'); 
+    background-size: cover;
+    
+}
+
+  .gameTitleDiv {
+    font-size: 2.5rem;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    color: rgb(250, 242, 231);
+    text-align: center;
+  }
+  
+  .hide {
+    height: 0;
+    padding: 0;
+    margin: 0;
+    visibility: hidden;
+  }
+
+.container {
+  background-color: #16191bc4;
+  border-radius: 4em;
+  
+}

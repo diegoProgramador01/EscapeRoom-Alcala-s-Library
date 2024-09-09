@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" type="text/css" href="../css/contador.css">
+  <title>London's underground Map</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url('../imagenes/metrolondres2.jpg'); /* Ruta de tu imagen de fondo */
+      background-color: black;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 60%;
+      
+    }
+    .contador{
+      filter: brightness(190%) contrast(130%);
+      position: absolute;
+      margin-bottom: 35%;
+      margin-right: 63%;
+      border: 4px solid #e6e6e6; /* Borde de 2px sólido de color gris oscuro */
+      padding: 10px; /* Espaciado interno de 10px */
+      font-size: 24px; /* Tamaño de fuente grande */
+      color: #fff; /* Texto en color blanco */
+      background-color: rgba(61, 29, 3, 0.774); /* Fondo en color gris oscuro */
+    }
+
+    .container {
+      text-align: center;
+      font-size: 40px;
+      color:rgb(255, 0, 51);
+      width: 37%;
+      padding-top: 5%;
+    }
+    
+    .button {    
+      display: inline-block;
+      padding: 20px 40px;
+      font-size: 20px;
+      background-color: #bdad6c;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s;
+      margin-top: 99.5%;
+      margin-left: 95%;
+      
+    }
+
+    .button:hover {
+      background-color: #8e624d;
+    }
+  </style>
+</head>
+<body>
+  
+  <div id="contador" class="contador"></div>
+  <div class="container">
+        
+    <a href="SalaPrincipal.html" class="button">Previous</a>
+  </div>
+</body>
+<script src="../js/bloquearZoom.js"></script>
+
+<script src="../js/contador.js"></script>
+</html>

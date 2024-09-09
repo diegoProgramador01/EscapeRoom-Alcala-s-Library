@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'MiFuentePersonalizada';
+    src: url('../tipografias/EMPORO.ttf') format('truetype');
+}
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url('../imagenes/inicio.webp'); /* Ruta de tu imagen de fondo */
+      background-size: 180em 90em;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .container {
+      font-family: 'MiFuentePersonalizada';
+      letter-spacing: 2vw; /* Cambiado de 10px a 2vw */
+      text-align: center;
+      font-size: 5vw; /* Cambiado de 80px a 5vw */
+      color: #a5b3df;
+      animation: cambioDeColor 2s infinite;
+    }
+    
+    .button {
+      display: inline-block;
+      padding: 1vh 3vw; /* Reducir el relleno */
+      font-size: 2vw; /* Reducir el tamaño de la fuente */
+      background-color: rgba(170, 153, 56, 0.849);
+      color: white;
+      border: none;
+      border-radius: 0.625em;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 1s;
+      position: absolute;
+      bottom: 5%; /* Mover más hacia abajo */
+      left: 50%;
+      transform: translateX(-50%); /* Centrar horizontalmente */
+    }
+    
+    .button:hover {
+      background-color: #c27b10;
+    }
+
+    @keyframes cambioDeColor {
+      0% {
+        color: #a5b3df;
+      }
+      50% {
+        color: rgb(50, 51, 53);
+      }
+      100% {
+        color: #a5b3df; 
+      }
+    }
+    
+
+    /*CSS DE PRUEBA PARA EL MENSAJE DE ACCESIBILIDAD*/
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999; /* Z-index alto para asegurar que esté encima de todo */
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.4);
+    }
+    
+    .modal-content {
+      font-family: 'MiFuentePersonalizada';
+      background-color: #fefefe;
+      margin: 15vh auto; /* Cambiado de 15vh auto a 15vh auto */
+      padding: 4vw; /* Cambiado de 4vw a 4vw */
+      border: 0.063em solid #888;
+      border-radius: 5vw; /* Cambiado de 5vw a 5vw */
+      width: 80%;
+      text-align: center;
+      font-size: 3vw; /* Cambiado de 3vw a 3vw */
+    }
+    
+    .button {
+      display: inline-block;
+      padding: 3vh 5vw; /* 3% del alto de la ventana y 5% del ancho de la ventana para el relleno */
+      font-size: 4vw; /* 4% del ancho de la ventana para el tamaño de la fuente */
+      background-color: rgba(170, 153, 56, 0.849);
+      color: white;
+      border: none;
+      border-radius: 5vw; /* 5% del ancho de la ventana para bordes redondeados */
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 1s;
+    }
+    
+    .button:hover {
+      background-color: #c27b10;
+    }

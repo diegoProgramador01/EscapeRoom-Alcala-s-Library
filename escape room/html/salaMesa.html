@@ -1,0 +1,300 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table room</title>
+  <link rel="stylesheet" type="text/css" href="../css/salaMesa.css">
+  <link rel="stylesheet" type="text/css" href="../css/contador.css">
+
+</head>
+<body>
+  <div id="contador" class="contador"></div>
+  
+
+  <!--ideas son un acertijo de cartas y otro un sudoku-->
+  <!--el del sudoku en el libro y el de cartas en la mesa del fondo-->
+
+
+
+<div class="lugar1" id="lugarCarta1"></div>
+
+  <div id="modal1" class="modal1 hidden">
+      <div class="cogerCarta">
+        <h1>Pick Up</h1>
+      </div>
+  </div>
+  <div class="lugar2" id="lugarCarta2"></div>
+
+  <div id="modal2" class="modal2 hidden">
+      <div class="cogerCarta">
+        <h1>Pick Up</h1>
+      </div>
+  </div>
+  
+  <div class="lugar3" id="lugarCarta3"></div>
+
+  <div id="modal3" class="modal3 hidden">
+      <div class="cogerCarta">
+        <h1>Pick Up</h1>
+      </div>
+  </div>
+
+  <div class="lugar4" id="lugarCarta4"></div>
+
+  <div id="modal4" class="modal4 hidden">
+      <div class="cogerCarta">
+        <h1>Pick Up</h1>
+      </div>
+  </div>
+  <div class="lugar5" id="lugarCarta5"></div>
+
+  <div id="modal5" class="modal5 hidden">
+      <div class="cogerCarta">
+        <h1>Pick Up</h1>
+      </div>
+  </div>
+  
+  <div class="lugar6" id="lugarCarta6"></div>
+
+  <div id="modal6" class="modal6 hidden">
+      <div class="cogerCarta">
+        <h1>Pick Up</h1>
+      </div>
+  </div>
+
+
+  </div>
+  <div class="boton-con-popup hidden" id="btnPopup"><img src="../imagenes/mesadelFondo.png"></div>
+  <!-- Modal -->
+<div class="modal" id="modal">
+  <div class="pruebaCartas">
+    <div class="cartas carta1" id="carta1"><p class="texto-con-bordes" id="pRED">RED</p></div>
+    <div class="cartas carta2" id="carta2"><p class="texto-con-bordes" id="pRED">BLUE</p></div>
+    <div class="cartas carta3" id="carta3"><p class="texto-con-bordes" id="pRED">GREEN</p></div>
+    <div class="cartas carta4" id="carta4"><p class="texto-con-bordes" id="pRED">BLACK</p></div>
+    <div class="cartas carta5" id="carta5"><p class="texto-con-bordes" id="pRED">YELLOW</p></div>
+    <div class="cartas carta6" id="carta6"><p class="texto-con-bordes" id="pRED">PURPLE</p></div>
+    
+    <span class="close" onclick="cerrarModal()">&times;</span>
+  </div>
+</div>
+
+
+<div class="libro hidden" id="libro"><img src="../imagenes/Libro sala mesa.png"></div>
+<!--LIBRO-->
+<div class="modalLibro" id="modalLibroID">
+  <div class="pruebaCrucigrama" id="pruebaCrucigramaID">
+      <div class="textoCrucigrama">
+        <p>
+          In a misty forest, a black-1 lurked, haunted by its past.  
+          A yellow-5 prowled, torn between man and beast under the full moon's gaze. 
+          A green-3 tinkered with ancient runes, seeking secrets lost to time. 
+          A purple-2 danced in shadows, craving the taste of moon-kissed blood.
+          A red-4 soared overhead, its fiery breath illuminating the night. 
+          And amidst them all, a blue-6 weaved spells, her laughter echoing through the enchanted woods, binding their fates together in an eternal dance of darkness
+        </p>
+      </div>
+    <iframe src="../Ejemplo Crucigrama/crucigrama.html" width="45%" height="90%" style="border:none; position: absolute; left: 825px; top: 6.25em; transform: scale(0.7); transform-origin: 0 0;"></iframe>
+    <span id="closeLibro" onclick="cerrarLibro()">&times;</span>
+  </div>
+</div>
+
+<!--Crucigrama, que en vez de el número, haya un color, que represente ese numero en rgb. 
+    Las palabras del crucigrama tienen que tener un sentido y una lógica con el resto del escape room.
+    La respuesta del crucigrama se saca gracias a las vocales de las palabras, esta prueba está relacionada con la de las cartas.
+    De las cartas sacas 2 números que son solo las respuestas correctas.
+     -->
+<!--
+tienes mejores ideas las podemos usar, de la prueba de las cartas sacarías 2 números que serían la primera mitad de un codigo para avanzar
+Como la profe ha dicho que hagamos cosas distintas podemos cambiar y que el código no sea un número sino otra cosa -->
+<a id="botonatras" href="SalaPrincipal.html" class="button">Previous</a>
+
+<div class="candadoFinal" id="candadoFinalID">
+  <img src="../imagenes/palanca.png">
+</div>
+
+<div class="modalFinal" id="modalFinal">
+  <div class="modal-content">
+    <div class="candado">
+      <span class="closeFinal">&times;</span>
+      <main>
+        <div id="combo-lock">
+          <div id="indicator" class="locked">
+            <svg class="locked" version="1.1" id="Lock" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+            <path d="M15.8,8H14V5.6C14,2.703,12.665,1,10,1C7.334,1,6,2.703,6,5.6V8H4C3.447,8,3,8.646,3,9.199V17
+            c0,0.549,0.428,1.139,0.951,1.307l1.197,0.387C5.672,18.861,6.55,19,7.1,19H12.9c0.549,0,1.428-0.139,1.951-0.307l1.196-0.387
+            C16.571,18.139,17,17.549,17,17V9.199C17,8.646,16.352,8,15.8,8z M12,8H8V5.199C8,3.754,8.797,3,10,3c1.203,0,2,0.754,2,2.199V8z"/>
+            </svg>
+            <svg class="unlocked" version="1.1" id="Lock_open" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve" onclick="window.location.href='puerta_final.html'">
+            <path d="M15.8,8H14V5.6C14,2.703,12.665,1,10,1C7.334,1,6,2.703,6,5.6V6h2V5.199C8,3.754,8.797,3,10,3c1.203,0,2,0.754,2,2.199V8H4
+              C3.447,8,3,8.646,3,9.199V17c0,0.549,0.428,1.139,0.951,1.307l1.197,0.387C5.672,18.861,6.55,19,7.1,19H12.9
+              c0.549,0,1.428-0.139,1.951-0.307l1.196-0.387C16.571,18.139,17,17.549,17,17V9.199C17,8.646,16.352,8,15.8,8z"/>
+            </svg>
+      
+          </div>
+          <div id="combination">
+            <div class="wheel">
+              <div class="increment" index="0">
+                <svg version="1.1" id="Chevron_small_up" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+         y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+      <path fill="#fff" d="M6.582,12.141c-0.271,0.268-0.709,0.268-0.978,0c-0.269-0.268-0.272-0.701,0-0.969l3.908-3.83
+        c0.27-0.268,0.707-0.268,0.979,0l3.908,3.83c0.27,0.267,0.27,0.701,0,0.969c-0.271,0.268-0.709,0.268-0.979,0L10,9L6.582,12.141z"/>
+      </svg>
+              </div>
+              <input class="digit" index="0" type="number" value="0" min="0" max="9">
+              <div class="decrement" index="0">
+              <svg version="1.1" id="Chevron_small_down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+         y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+      <path fill="#fff" d="M13.418,7.859c0.271-0.268,0.709-0.268,0.978,0c0.27,0.268,0.272,0.701,0,0.969l-3.908,3.83
+        c-0.27,0.268-0.707,0.268-0.979,0l-3.908-3.83c-0.27-0.267-0.27-0.701,0-0.969c0.271-0.268,0.709-0.268,0.978,0L10,11L13.418,7.859z
+        "/>
+      </svg>
+              </div>
+            </div>
+            <div class="wheel">
+              <div class="increment" index="1">
+                <svg version="1.1" id="Chevron_small_up" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+         y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+      <path fill="#fff" d="M6.582,12.141c-0.271,0.268-0.709,0.268-0.978,0c-0.269-0.268-0.272-0.701,0-0.969l3.908-3.83
+        c0.27-0.268,0.707-0.268,0.979,0l3.908,3.83c0.27,0.267,0.27,0.701,0,0.969c-0.271,0.268-0.709,0.268-0.979,0L10,9L6.582,12.141z"/>
+      </svg>
+              </div>
+              <input class="digit" index="1" type="number" value="0" min="0" max="9">
+              <div class="decrement" index="1">
+                <svg version="1.1" id="Chevron_small_down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+         y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+      <path fill="#fff" d="M13.418,7.859c0.271-0.268,0.709-0.268,0.978,0c0.27,0.268,0.272,0.701,0,0.969l-3.908,3.83
+        c-0.27,0.268-0.707,0.268-0.979,0l-3.908-3.83c-0.27-0.267-0.27-0.701,0-0.969c0.271-0.268,0.709-0.268,0.978,0L10,11L13.418,7.859z
+        "/>
+      </svg>
+              </div>
+            </div>
+            <div class="wheel">
+              <div class="increment" index="2">
+                <svg version="1.1" id="Chevron_small_up" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+         y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+      <path fill="#fff" d="M6.582,12.141c-0.271,0.268-0.709,0.268-0.978,0c-0.269-0.268-0.272-0.701,0-0.969l3.908-3.83
+        c0.27-0.268,0.707-0.268,0.979,0l3.908,3.83c0.27,0.267,0.27,0.701,0,0.969c-0.271,0.268-0.709,0.268-0.979,0L10,9L6.582,12.141z"/>
+      </svg>
+              </div>
+              <input class="digit" index="2" type="number" value="0" min="0" max="9">
+              <div class="decrement" index="2">
+                <svg version="1.1" id="Chevron_small_down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+         y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+      <path fill="#fff" d="M13.418,7.859c0.271-0.268,0.709-0.268,0.978,0c0.27,0.268,0.272,0.701,0,0.969l-3.908,3.83
+        c-0.27,0.268-0.707,0.268-0.979,0l-3.908-3.83c-0.27-0.267-0.27-0.701,0-0.969c0.271-0.268,0.709-0.268,0.978,0L10,11L13.418,7.859z
+        "/>
+      </svg>
+              </div>
+            </div>
+            <div class="wheel">
+              <div class="increment" index="3">
+                <svg version="1.1" id="Chevron_small_up" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+         y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+      <path fill="#fff" d="M6.582,12.141c-0.271,0.268-0.709,0.268-0.978,0c-0.269-0.268-0.272-0.701,0-0.969l3.908-3.83
+        c0.27-0.268,0.707-0.268,0.979,0l3.908,3.83c0.27,0.267,0.27,0.701,0,0.969c-0.271,0.268-0.709,0.268-0.979,0L10,9L6.582,12.141z"/>
+      </svg>
+              </div>
+              <input class="digit" index="3" type="number" value="0" min="0" max="9">
+              <div class="decrement" index="3">
+                <svg version="1.1" id="Chevron_small_down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+         y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+      <path fill="#fff" d="M13.418,7.859c0.271-0.268,0.709-0.268,0.978,0c0.27,0.268,0.272,0.701,0,0.969l-3.908,3.83
+        c-0.27,0.268-0.707,0.268-0.979,0l-3.908-3.83c-0.27-0.267-0.27-0.701,0-0.969c0.271-0.268,0.709-0.268,0.978,0L10,11L13.418,7.859z
+        "/>
+      </svg>
+              </div>
+            </div>
+            <div class="wheel">
+              <div class="increment" index="4">
+                <svg version="1.1" id="Chevron_small_up" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+         y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+      <path fill="#fff" d="M6.582,12.141c-0.271,0.268-0.709,0.268-0.978,0c-0.269-0.268-0.272-0.701,0-0.969l3.908-3.83
+        c0.27-0.268,0.707-0.268,0.979,0l3.908,3.83c0.27,0.267,0.27,0.701,0,0.969c-0.271,0.268-0.709,0.268-0.979,0L10,9L6.582,12.141z"/>
+      </svg>
+              </div>
+              <input class="digit" index="4" type="number" value="0" min="0" max="9">
+              <div class="decrement" index="4">
+              <svg version="1.1" id="Chevron_small_down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+         y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+      <path fill="#fff" d="M13.418,7.859c0.271-0.268,0.709-0.268,0.978,0c0.27,0.268,0.272,0.701,0,0.969l-3.908,3.83
+        c-0.27,0.268-0.707,0.268-0.979,0l-3.908-3.83c-0.27-0.267-0.27-0.701,0-0.969c0.271-0.268,0.709-0.268,0.978,0L10,11L13.418,7.859z
+        "/>
+      </svg>
+              </div>
+            </div>
+            <div class="wheel">
+              <div class="increment" index="5">
+                <svg version="1.1" id="Chevron_small_up" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+         y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+      <path fill="#fff" d="M6.582,12.141c-0.271,0.268-0.709,0.268-0.978,0c-0.269-0.268-0.272-0.701,0-0.969l3.908-3.83
+        c0.27-0.268,0.707-0.268,0.979,0l3.908,3.83c0.27,0.267,0.27,0.701,0,0.969c-0.271,0.268-0.709,0.268-0.979,0L10,9L6.582,12.141z"/>
+      </svg>
+              </div>
+              <input class="digit" index="5" type="number" value="0" min="0" max="9">
+              <div class="decrement" index="5">
+                <svg version="1.1" id="Chevron_small_down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+         y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+      <path fill="#fff" d="M13.418,7.859c0.271-0.268,0.709-0.268,0.978,0c0.27,0.268,0.272,0.701,0,0.969l-3.908,3.83
+        c-0.27,0.268-0.707,0.268-0.979,0l-3.908-3.83c-0.27-0.267-0.27-0.701,0-0.969c0.271-0.268,0.709-0.268,0.978,0L10,11L13.418,7.859z
+        "/>
+      </svg>
+              </div>
+            </div>
+            <div class="wheel">
+              <div class="increment" index="6">
+                <svg version="1.1" id="Chevron_small_up" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+         y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+      <path fill="#fff" d="M6.582,12.141c-0.271,0.268-0.709,0.268-0.978,0c-0.269-0.268-0.272-0.701,0-0.969l3.908-3.83
+        c0.27-0.268,0.707-0.268,0.979,0l3.908,3.83c0.27,0.267,0.27,0.701,0,0.969c-0.271,0.268-0.709,0.268-0.979,0L10,9L6.582,12.141z"/>
+      </svg>
+              </div>
+              <input class="digit" index="6" type="number" value="0" min="0" max="9">
+              <div class="decrement" index="6">
+                <svg version="1.1" id="Chevron_small_down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+         y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+      <path fill="#fff" d="M13.418,7.859c0.271-0.268,0.709-0.268,0.978,0c0.27,0.268,0.272,0.701,0,0.969l-3.908,3.83
+        c-0.27,0.268-0.707,0.268-0.979,0l-3.908-3.83c-0.27-0.267-0.27-0.701,0-0.969c0.271-0.268,0.709-0.268,0.978,0L10,11L13.418,7.859z
+        "/>
+      </svg>
+              </div>
+            </div>
+            <div class="wheel">
+              <div class="increment" index="7">
+                <svg version="1.1" id="Chevron_small_up" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+         y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+      <path fill="#fff" d="M6.582,12.141c-0.271,0.268-0.709,0.268-0.978,0c-0.269-0.268-0.272-0.701,0-0.969l3.908-3.83
+        c0.27-0.268,0.707-0.268,0.979,0l3.908,3.83c0.27,0.267,0.27,0.701,0,0.969c-0.271,0.268-0.709,0.268-0.979,0L10,9L6.582,12.141z"/>
+      </svg>
+              </div>
+              <input class="digit" index="7" type="number" value="0" min="0" max="9">
+              <div class="decrement" index="7">
+                <svg version="1.1" id="Chevron_small_down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+         y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+      <path fill="#fff" d="M13.418,7.859c0.271-0.268,0.709-0.268,0.978,0c0.27,0.268,0.272,0.701,0,0.969l-3.908,3.83
+        c-0.27,0.268-0.707,0.268-0.979,0l-3.908-3.83c-0.27-0.267-0.27-0.701,0-0.969c0.271-0.268,0.709-0.268,0.978,0L10,11L13.418,7.859z
+        "/>
+      </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    
+    </div>
+    
+  </div>
+</div>
+
+</body>
+<script src="../js/bloquearZoom.js"></script>
+<script src="../js/salaMesa.js"></script>
+<script src="../js/cartas.js"></script>
+
+
+<script src="../js/contador.js"></script>
+</html>

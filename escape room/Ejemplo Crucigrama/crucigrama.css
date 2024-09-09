@@ -1,0 +1,86 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.crossword {
+  gap: 0.313em;
+}
+
+input[type="text"] {
+  width: 2.5em;
+  height: 1.875em;
+  font-size: 1.25em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.claveFinal {
+  position: absolute;
+  font-size: 1.875em;
+  margin-top: 40%;
+  border-radius: 0.625em; /* Bordes redondeados */
+  border: 0.125em solid rgb(255, 255, 255);
+  padding: 0.625em; /* Espacio interior */
+  cursor: pointer;
+  border: #e60808 solid;
+  background-color: antiquewhite;
+}
+
+input[disabled] {
+  background-color: #f8dbb1;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  width: 30.75em;
+  height: 38.75em;
+  overflow: auto;
+  background-image: url("../imagenes/pergamino1.PNG");
+  background-size: 60em 60em;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 4%;
+}
+
+.modal-container {
+  position: relative; 
+  padding: 9.375em 0em; 
+  top: 50%; 
+  transform: translateY(-50%); 
+}
+
+.close {
+  height: 0.625em;
+  width: 0.625em;
+  position: absolute;
+  top: 5%;
+  left: 25.5%;
+  color: #e60808;
+  font-size: 4.75em;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+@font-face {
+  font-family: 'FuenteLeyenda';
+  src: url('../tipografias/geek.ttf') format('truetype');
+}
+
+.numeros {
+  position: absolute;
+  font-size: 3.625em;
+  top: 45%;
+  font-family: 'FuenteLeyenda';
+  left: 25.5%;
+}

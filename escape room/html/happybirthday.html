@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partitura</title>
+  <link rel="stylesheet" href="../css/happybirthday.css">
+  <link rel="stylesheet" type="text/css" href="../css/contador.css">
+  
+</head>
+<body>
+  <div id="contador" class="contador"></div>
+  <div class="nota" id="nota" onclick="mostrarSolucion()"></div>
+  <div class="solucion" id="solucion">
+    <h1>Positions: <br>evens double, odds minus two</h1>
+  </div>
+  <a href="SalaPrincipal.html" class="button">Previous</a>
+</body>
+<script>
+  function mostrarSolucion() {
+    var solucion = document.getElementById("solucion");
+    var nota = document.getElementById("nota");
+      solucion.style.display = "block";
+      nota.style.display="none";
+  }
+  document.body.style.overflow = 'hidden';
+</script>
+<script src="../js/bloquearZoom.js"></script>
+<script src="../js/contador.js"></script>
+</html>

@@ -1,0 +1,44 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+    background-image: url("../imagenes/puerta_final.webp"); /* Tu imagen de fondo */
+    background-size: cover;
+}
+
+#puerta{
+    user-select: none;
+    position: absolute;
+    margin-left:3.55%;
+    margin-top: .3%;
+    cursor: pointer;
+}
+
+  .puerta:hover{
+    /*filter: brightness(110%);*/
+    filter: drop-shadow(
+      0 0 0.6em rgb(255, 255, 0, 0.3)
+    )
+  }
+.contador {
+  filter: brightness(110%) contrast(120%);
+  position: absolute;
+  margin-bottom: 35%;
+  margin-right: 63%;
+  transform: translate(-50%, -50%);
+  border: 0.188em solid #FFE4B5; /* Borde de 3px sólido de color marrón */
+  padding: 1em; /* Espaciado interno de 15px */
+  font-family: 'Garamond', serif; /* Fuente estilo siglo 18 */
+  font-size: 1.5em; /* Tamaño de fuente grande */
+  color: #FFE4B5; /* Texto en color marrón */
+  background-color:  #8b451359; /* Fondo en color piel */
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.5); /* Sombra */
+}

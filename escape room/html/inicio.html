@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home screen</title>
+  <link rel="stylesheet" href="../css/inicio.css">
+</head>
+<body>
+  <div class="container">
+    <h1>WELCOME TO ALCALA'S LIBRARY</h1>
+    <a href="historia.html" id="inicio" class="button">Start</a>
+  </div>
+
+  <!-- Modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <p>THIS PAGE IS NOT ACCESSIBLE FOR BLIND PEOPLE. PLEASE, TAKE IT INTO ACCOUNT!</p>
+      <button onclick="cerrarModal()" class="button">Understood</button>
+    </div>
+  </div>
+  
+
+  <script>
+    
+    // Función para mostrar el modal
+    function mostrarModal() {
+      var modal = document.getElementById('myModal');
+      modal.style.display = "block";
+    }
+
+    // Función para cerrar el modal
+    function cerrarModal() {
+      var modal = document.getElementById('myModal');
+      modal.style.display = "none";
+    }
+    
+    // Función para reproducir el texto en voz alta
+    function reproducirTexto() {
+      var texto = "THIS PAGE IS NOT ACCESSIBLE FOR BLIND PEOPLE. PLEASE, TAKE IT INTO ACCOUNT";
+      var synthesis = window.speechSynthesis;
+      var utterance = new SpeechSynthesisUtterance(texto);
+
+      var voices = synthesis.getVoices();
+      var voice = voices.find(v => v.lang === 'en-US');
+        utterance.voice = voice;
+        utterance.lang = 'en-US';
+
+      synthesis.speak(utterance);
+    }
+
+    // Mostrar el modal y reproducir texto al cargar la página
+    window.onload = function() {
+      mostrarModal();
+      reproducirTexto();
+    };
+  </script>
+  <script src="../js/contador.js"></script>
+</body>
+</html>

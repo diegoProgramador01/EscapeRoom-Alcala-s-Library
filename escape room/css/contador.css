@@ -1,0 +1,24 @@
+#gameOverMessage {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem; /* Tamaño inicial del texto */
+    color: white; /* Color inicial del texto */
+    text-align: center;
+    font-weight: bold;
+    margin-top: 9em;
+    opacity: 1;
+    animation: zoomAndColorChange 5s forwards; /* Anima el texto para hacer zoom y cambiar de color */
+}
+
+@keyframes zoomAndColorChange {
+    from {
+        transform: translate(-50%, -50%) scale(1); /* Inicia con tamaño normal */
+        color: white; /* Comienza con el color blanco */
+    }
+    to {
+        transform: translate(-50%, -50%) scale(8); /* Termina con un tamaño 3 veces mayor */
+        color: #8A0303; /* Termina con un color rojo sangre */
+    }
+}

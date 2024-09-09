@@ -1,0 +1,558 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contador {
+  filter: brightness(110%) contrast(120%);
+  position: absolute;
+  margin-bottom: 35%;
+  margin-right: 63%;
+  transform: translate(-50%, -50%);
+  border: 0.188em solid #FFE4B5; /* Borde de 3px sólido de color marrón */
+  padding: 1em; /* Espaciado interno de 15px */
+  font-family: 'Garamond', serif; /* Fuente estilo siglo 18 */
+  font-size: 1.5em; /* Tamaño de fuente grande */
+  color: #FFE4B5; /* Texto en color marrón */
+  background-color:  #8b451359; /* Fondo en color piel */
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.5); /* Sombra */
+}
+.modal1{
+  z-index: 18;
+  position: absolute;
+  display: none;
+  cursor: pointer;
+  background-image: url("../imagenes/carta_roja.png");
+  background-size: cover;
+  border-radius: 0.625em;
+  width: 12.5em;
+  height: 17.5em;
+}
+.modal2{
+  z-index: 18;
+  position: absolute;
+  display: none;
+  cursor: pointer;
+  background-image: url("../imagenes/carta_azul.png");
+  background-size: cover;
+  border-radius: 0.625em;
+  width: 12.5em;
+  height: 17.5em;
+}
+.modal3{
+  z-index: 18;
+  position: absolute;
+  display: none;
+  cursor: pointer;
+  background-image: url("../imagenes/carta_verde.png");
+  background-size: cover;
+  border-radius: 0.625em;
+  width: 12.5em;
+  height: 17.5em;
+}
+.modal4{
+  z-index: 18;
+  position: absolute;
+  display: none;
+  cursor: pointer;
+  background-image: url("../imagenes/carta_negra.png");
+  background-size: cover;
+  border-radius: 0.625em;
+  width: 12.5em;
+  height: 17.5em;
+}
+.modal5{
+  z-index: 18;
+  position: absolute;
+  display: none;
+  cursor: pointer;
+  background-image: url("../imagenes/carta_amarilla.png");
+  background-size: cover;
+  border-radius: 0.625em;
+  width: 12.5em;
+  height: 17.5em;
+}
+.modal6{
+  z-index: 18;
+  position: absolute;
+  display: none;
+  cursor: pointer;
+  background-image: url("../imagenes/carta_morada.png");
+  background-size: cover;
+  border-radius: 0.625em;
+  width: 12.5em;
+  height: 17.5em;
+}
+
+body {
+  background-image: url("../imagenes/salaMesa.png"); /* Ruta de tu imagen de fondo */
+  background-size: cover; /* Asegura que la imagen cubra completamente el fondo */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  background-color: aqua;
+  width: 3.125em;
+  height: 1.25em;
+}
+#botonatras{
+  background-color: #474748; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    padding: 0.625em 1.25em; /* Espacio interno del botón */
+    border-radius: 0.313em; /* Borde redondeado del botón */
+    cursor: pointer;
+  position: absolute;
+  margin-top: 25em;
+  margin-left: 43.75em;
+  
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+}
+.modalLibro {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 6.25em;
+  top: 1.25em;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  background-size: cover;
+}
+.boton-con-popup {
+  user-select: none;
+  z-index: 1;
+  position: absolute;
+  bottom: 51%;
+  left: 41.2%;
+  cursor: pointer;
+}
+
+.close {
+  margin-left: 20.8em;
+  margin-bottom: 14em;
+  font-size: 3.125em;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  height: 1.875em;
+}
+
+#closeLibro{
+    margin-left: 20.8em;
+    margin-bottom: 14em;
+    font-size: 3.125em;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    height: 1.875em;
+}
+
+.libro {
+  position: absolute;
+  cursor: pointer;
+  margin-left: 11.7%;
+  margin-top: 33%;
+    border-radius: 37.5em;
+}
+
+.libro:hover {
+  /*filter: brightness(110%);*/
+  filter: drop-shadow(
+    0 0 0.313em rgb(255, 255, 0,4)
+  )
+}
+
+.inputCodigo {
+  height: 1.25em;
+  border: 0.125em brown;
+}
+.lugar1{
+  position: absolute;
+  cursor: pointer;
+
+  height: 1.563em;
+  width: 0.438em;
+  margin-bottom: 11%;
+  margin-right: 23.5%;
+}
+
+.lugar2{
+  position: absolute;
+  cursor: pointer;
+
+  height: 5em;
+  width: 0.813em;
+  margin-bottom: 26%;
+  margin-left: 67.5%;
+}
+.lugar3{
+  position: absolute;
+  cursor: pointer;
+  height: 4.063em;
+  width: 0.813em;
+  margin-top: -10%;
+  margin-right: 57.6%;
+}
+.lugar4{
+  position: absolute;
+  cursor: pointer;
+  height: 2.5em;
+  width: 0.625em;
+  margin-bottom: 1.5%;
+  margin-left: 20.7%;
+}
+.lugar5{
+  position: absolute;
+  cursor: pointer;
+  height: 5em;
+  width: 0.5em;
+  margin-top: 20.4%;
+  margin-right: 34.2%;
+}
+.lugar6{
+  position: absolute;
+  cursor: pointer;
+  height: 1.25em;
+  width: 1.25em;
+  border-radius: 0.625em;
+  margin-bottom: 18.6%;
+  margin-right: 3.3%;
+}
+.lugar1:hover,.lugar2:hover,.lugar3:hover,.lugar4:hover,.lugar5:hover,.lugar6:hover{
+  box-shadow: 
+        0 0 0.625em rgba(255, 255, 0, 0.2), /* Sombra hacia afuera */
+        inset 0 0 0.625em rgba(255, 255, 0, 0.2); /* Sombra hacia adentro */
+}
+
+
+.pruebaCrucigrama {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 3% auto;
+  background-image: url("../imagenes/libro_mesa.png");
+  background-size: cover;
+
+  background-position-y: -1em;
+  border: 0.063em solid #888;
+  border-radius: 1.25em;
+  width: 68.75em;/*68.75em*/
+  height: 50em;/*50em*/
+}
+
+
+.pruebaCartas {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 3% auto;
+  background-image: url("../imagenes/tapeteCartas.png");
+  background-size: cover;
+  background-position: center;
+  border: 0.063em solid #888;
+  border-radius: 1.25em;
+  width: 68.75em;
+  height: 50em;
+}
+
+.cartas {
+  height: 23.5%;
+  width: 9%;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  border-radius: 0.40em;
+  cursor: pointer;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.cartas.girada{
+  transform: rotateY(180deg);
+}
+
+
+.carta1 {
+  background-image: url("../imagenes/carta_roja.png");
+  margin-left: -31.25em;
+  margin-top: -18.75em;
+  visibility: hidden;
+}
+
+.carta2 {
+  background-image: url("../imagenes/carta_azul.png");
+  margin-left: 31.25em;
+  margin-top: -18.75em;
+  visibility: hidden;
+
+}
+
+.carta3 {
+  background-image: url("../imagenes/carta_verde.png");
+  margin-top: -18.75em;
+  visibility: hidden;
+}
+
+.carta4 {
+  background-image: url("../imagenes/carta_negra.png");
+  margin-left: -31.25em;
+  margin-top: 18.75em;
+  visibility: hidden;
+}
+
+.carta5{
+  background-image: url("../imagenes/carta_amarilla.png");
+  margin-left: 31.25em;
+  margin-top: 18.75em;
+  visibility: hidden;
+}
+.carta6{
+  background-image: url("../imagenes/carta_morada.png");
+  margin-top: 18.75em;
+  visibility: hidden;
+}
+
+.cartaReversa1{
+  background-image: url("../imagenes/carta_frontal_dragon.png");
+}
+.cartaReversa2{
+  background-image: url("../imagenes/carta_frontal_bruja.png");
+}
+.cartaReversa3{
+  background-image: url("../imagenes/carta_frontal_enano.png");
+}
+.cartaReversa4{
+  background-image: url("../imagenes/carta_frontal_fantasma.png");
+}
+.cartaReversa5{
+  background-image: url("../imagenes/carta_frontal_hombrelobo.png");
+}
+.cartaReversa6{
+  background-image: url("../imagenes/carta_frontal_vampiro.png");
+}
+.hidden {
+  display: none;
+}
+
+.textoCrucigrama{
+  position: absolute;
+  margin-right:21.5%;
+  margin-bottom: 5%;
+  font-size: large;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: justify;
+  width: 18.75em;
+  line-height: 1.875em;
+}
+
+.cogerCarta {
+  background-color: rgba(255, 255, 255, 0.5); /* White with 50% transparency */
+  color: black; /* Text color */
+  height: 2.5em; /* Adjust as needed */
+  width: 12.5em; /* Adjust as needed */
+  display: flex;
+  justify-content: center; /* Centers text horizontally */
+  align-items: center; /* Centers text vertically */
+  border-radius: 0.625em; /* Optional: adds rounded corners */
+  margin-top: 18.75em;
+}
+
+.texto-con-bordes {
+  border: 0.2em solid black; /* Borde sólido de 0.2em de ancho y negro */
+  padding: 0.5em; /* Espacio de relleno interior de 1em */
+  margin-top: 14.375em; /* Margen superior de 1em para separar del contenido superior */
+  background-color: #f0f0f0; /* Color de fondo gris claro */
+  border-radius: 0.5em; /* Borde redondeado */
+  text-align: center;
+}
+
+.oculto {
+  display: none; /* Ocultar el elemento */
+}
+
+/* Estilos para el candado */
+.candadoFinal {
+    user-select: none;
+    position: absolute;
+    margin-top: -11.6%;
+    margin-right: -58%;
+    cursor: pointer;
+    width: 2.188em;
+    height: 4.063em;
+}
+
+.candadoFinal:hover {
+  filter: drop-shadow(
+      0 0 0.313em rgb(255, 255, 0,0.4)
+    )
+}
+
+.closeFinal {
+  margin-left: 14em;
+  margin-bottom: 20em;
+  font-size: 3.125em;
+  color: rgb(254, 254, 254);
+  cursor: pointer;
+  height: 1.875em;
+}
+
+.modalFinal{
+  z-index: 18;
+  position: absolute;
+  display: none;
+  cursor: pointer;
+  background-image: url("../imagenes/candado_palanca.webp");
+  background-size: cover;
+  border-radius: 2em;
+  width: 50em;
+  height: 50em;
+}
+.candado{
+  margin-left: 1em;
+}
+
+#combo-lock {
+	#indicator {
+		border: 0.125em solid black;
+		border-radius: 50%;
+		height: 2em;
+    margin-top: 20em;
+    margin-left: 23em;
+		overflow: hidden;
+		position: relative;
+		width: 2em;
+
+		&.locked {
+			svg.unlocked {
+				transform: translate(-50%, 50%);
+			}
+		}
+
+		&.unlocked {
+			svg.locked {
+				transform: translate(-50%, -100%);
+			}
+
+			svg.unlocked {
+				transform: translate(-50%, -50%);
+			}
+		}
+
+		svg {
+      padding: 1em; /* 16px es aproximadamente el 2% del tamaño del contenedor */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: transform 0.25s ease;
+      width: 1em;
+
+			&.locked {
+				background: red;
+			}
+
+			&.unlocked {
+				background: green;
+			}
+		}
+	}
+
+	#combination {
+    position: absolute;
+		border: 0.125em solid black;
+		border-radius: 0.25em;
+		display: flex;
+    margin-top: 3em;
+    margin-left: 13.5em;
+
+		.wheel {
+			font-size: 1.5em;
+			padding: 0 0.25em;
+			text-align: center;
+
+			.increment,
+			.decrement {
+				background: rgb(57, 57, 57);
+				border: 0.125em solid black;
+				border-radius: 50%;
+				cursor: pointer;
+				height: 1em;
+				position: relative;
+				transition: border-color 0.1s ease;
+				width: 1em;
+
+				&:active {
+					border-color: white;
+				}
+
+				&.click {
+					border-color: white;
+					transition: border-color 0s ease;
+				}
+
+				img {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 1.5em;
+				}
+			}
+
+			.increment {
+				margin-top: -0.875em;
+			}
+
+			.decrement {
+				margin-bottom: -0.875em;
+			}
+
+			.digit {
+				
+        background: rgb(57, 57, 57);
+				border: 0.125em solid black;
+				border-radius: 1.5em;
+				caret-color: rgb(57, 57, 57);
+				color:white;
+				cursor: pointer;
+				margin: 0.5em 0;
+				outline: none;
+				padding: 0.5em 0;
+				text-align: center;
+				user-select: none;
+				transition: border-color 0.1s ease;
+				width: 1.5em;
+
+				&:focus {
+					border-color: white;
+				}
+
+				&::-webkit-inner-spin-button, 
+				&::-webkit-outer-spin-button {
+					-webkit-appearance: none; 
+  					margin: 0;
+				}
+
+				&::selection {
+					background: transparent;
+				}
+			}
+		}
+	}
+}

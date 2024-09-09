@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Asegura que el cuerpo de la página tenga el alto de la ventana */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../imagenes/pergamino1.webp');
+  background-size: cover; /* Cubre toda la pantalla sin distorsión */
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden; /* Evita el desplazamiento fuera del contenedor */
+}
+
+.contador {
+  filter: brightness(110%) contrast(120%);
+  position: absolute;
+  top: 5%; /* Control desde arriba */
+  right: 5%; /* Control desde la derecha */
+  border: 3px solid #FFE4B5;
+  padding: 15px;
+  font-family: 'Garamond', serif;
+  font-size: 1.5em;
+  color: #FFE4B5;
+  background-color: rgba(139, 69, 19, 0.349);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  text-align: center;
+  font-size: 1.5em;
+  width: 52%; /* Anchura ajustada para visualización adecuada */
+  max-height: 100vh; /* Altura máxima para evitar el desbordamiento fuera de la vista */
+  overflow-y: auto; /* Permite desplazamiento vertical dentro del contenedor si es necesario */
+  padding: 0%;
+  
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 1.25em;
+  background-color: #bdad6c;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #b68235;
+}
+
+p {
+  font-size: 1.2em; /* Ajustado para mejor legibilidad en pantallas de todos tamaños */
+  color: black;
+  font-weight: bold;
+  text-align: justify;
+  margin: 0.5em 0; /* Ajuste de margen para evitar que el texto se agrupe */
+}

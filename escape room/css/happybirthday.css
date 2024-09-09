@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'FuenteLeyenda';
+  src: url('../tipografias/geek.ttf') format('truetype');
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../imagenes/happyBirthday.jpg'); /* Ruta de tu imagen de fondo */
+    background-size: 150vm 80vm;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
+  }
+  .contador {
+    filter: brightness(110%) contrast(120%);
+    position: absolute;
+    margin-bottom: 35%;
+    margin-right: 63%;
+    transform: translate(-50%, -50%);
+    border: 0.188em solid #FFE4B5; /* Borde de 3px sólido de color marrón */
+    padding: 0.938em; /* Espaciado interno de 15px */
+    font-family: 'Garamond', serif; /* Fuente estilo siglo 18 */
+    font-size: 1.5em; /* Tamaño de fuente grande */
+    color: #FFE4B5; /* Texto en color marrón */
+    background-color:  #8b451359; /* Fondo en color piel */
+    box-shadow: 0 0 0.938em rgba(0, 0, 0, 0.5); /* Sombra */
+}
+  
+  .button {
+    position: absolute;
+    top: 1.25em; /* Ajusta según sea necesario */
+    right: 1.25em; /* Ajusta según sea necesario */
+    padding: 1.25em 2.5em;
+    font-size: 1.25em;
+    background-color: #bdad6c;
+    color: white;
+    border-radius: 0.625em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .button:hover {
+    background-color: #8e624d;
+  }
+
+  .nota {
+    margin-left: 11.1em;
+    margin-top: 22em; /* Ajusta según sea necesario */
+    left: 26.25em;
+    width: 0.875em;
+    height: 0.875em;
+    cursor: pointer;
+  }
+
+  .solucion {
+    font-family: 'FuenteLeyenda';
+    position: absolute;
+    top: 9.375em; /* Ajusta según sea necesario */  
+    left: 50%; /* Centrado horizontal */
+    transform: translateX(-50%); /* Centrado horizontal */
+    padding: 1.25em; /* Añade un espacio alrededor del texto */
+    background-color: rgba(174, 101, 6, 0.5); /* Fondo de color semitransparente */
+    color: rgb(0, 0, 0);
+    font-size: 2.5em;
+    display: none; /* Oculta la solución por defecto */
+    border-radius: 0.625em; /* Añade bordes redondeados */
+    text-align: center; /* Centra el texto */
+  }
